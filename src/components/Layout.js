@@ -12,6 +12,9 @@ const Wrapper = styled.div`
     display: grid;
     grid-auto-flow: column;
     justify-content: space-evenly;
+    li {
+      padding: 1rem;
+    }
   }
   main {
     color: #fff;
