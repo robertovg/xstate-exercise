@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import logo from '../logo.svg'
+import Layout from '../components/Layout'
 
 const Wrapper = styled.div`
   text-align: center;
@@ -43,23 +44,25 @@ const Wrapper = styled.div`
 function OriginalApp({ what }) {
   const optionalVariable = what?.works ?? `works`
   return (
-    <Wrapper>
-      <header className="App-header">
-        <h1>{optionalVariable}</h1>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </Wrapper>
+    <Layout>
+      <Wrapper>
+        <header className="App-header">
+          <h1>{optionalVariable}</h1>
+          <img src={logo} className="App-logo" alt="logo" />
+          <p>
+            Edit <code>src/App.js</code> and save to reload.
+          </p>
+          <a
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Learn React
+          </a>
+        </header>
+      </Wrapper>
+    </Layout>
   )
 }
 
