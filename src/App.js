@@ -6,6 +6,7 @@ import Toggle from './pages/Toggle'
 import Layout from './components/Layout'
 import DataLoader from './pages/DataLoader'
 import VideoController from './pages/VideoController'
+import ContextProvider from './globalState/ContextProvider'
 
 const NotFoundPage = () => {
   return (
@@ -23,8 +24,7 @@ const routes = {
 
 const App = () => {
   const routeResult = useRoutes(routes)
-
-  return routeResult || <NotFoundPage />
+  return <ContextProvider>{routeResult || <NotFoundPage />}</ContextProvider>
 }
 
 export default App

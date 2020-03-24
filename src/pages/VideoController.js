@@ -46,6 +46,7 @@ const VideoControllerWrapper = styled.div`
 
 /**
  * Video State Machine
+ * We don't have to alwyas put Machines in GlobalState, we can keep some inside components
  */
 
 const videoMachine = Machine({

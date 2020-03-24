@@ -1,32 +1,13 @@
 import React from 'react'
-import { useMachine } from '@xstate/react'
-import { Machine } from 'xstate'
 import Layout from '../components/Layout'
+import { useToggleContext } from '../globalState/ToggleMachine'
 /**
  * Example following -
  * [XState - An introduction - Finite State Machines in React - Toggle](https://www.youtube.com/watch?v=iDZxjJYMOUQ)
  */
 
-const toggleMachine = new Machine({
-  id: 'toggleMachine',
-  initial: 'inactive',
-  states: {
-    inactive: {
-      on: {
-        TOGGLE: 'active',
-      },
-    },
-    active: {
-      on: {
-        TOGGLE: 'inactive',
-      },
-    },
-  },
-})
-
 const Toggle = () => {
-  const [current, send] = useMachine(toggleMachine, { devTools: true })
-
+  const { send, current } = useToggleContext()
   return (
     <Layout>
       <button

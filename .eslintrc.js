@@ -42,6 +42,7 @@ module.exports = {
     'eslint(one-var)': 'off',
     'react/jsx-props-no-spreadin': 'off',
     'no-param-reassign': 'off',
+    'react-hooks/exhaustive-deps': 'off',
   },
   settings: {
     react: {
