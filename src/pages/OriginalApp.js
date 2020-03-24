@@ -42,24 +42,15 @@ const Wrapper = styled.div`
   }
 `
 function OriginalApp({ what }) {
+  // Optional chain check
   const optionalVariable = what?.works ?? `works`
   return (
     <Layout>
       <Wrapper>
         <header className="App-header">
-          <h1>{optionalVariable}</h1>
+          <h1>XState Examples</h1>
           <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <p>optional chaining: {optionalVariable}</p>
         </header>
       </Wrapper>
     </Layout>

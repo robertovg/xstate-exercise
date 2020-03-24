@@ -8,7 +8,6 @@ const perPage = 10
 
 const dataMachine = new Machine({
   id: 'dataMachine',
-  devTools: true,
   initial: 'loading',
   context: {
     data: [],
@@ -65,7 +64,7 @@ const dataMachine = new Machine({
 ](https://www.youtube.com/watch?v=XaHk9vhmus4)
  */
 const DataLoader = () => {
-  const [current, send] = useMachine(dataMachine)
+  const [current, send] = useMachine(dataMachine, { devTools: true })
   const { data } = current.context
 
   return (

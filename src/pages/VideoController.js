@@ -51,7 +51,6 @@ const VideoControllerWrapper = styled.div`
 const videoMachine = Machine({
   id: 'video',
   initial: 'loading',
-  devTools: true,
 
   context: {
     video: null,
@@ -148,6 +147,7 @@ const VideoController = () => {
   const ref = React.useRef(null)
   const [current, send] = useMachine(videoMachine, {
     actions: { setVideo, setElapsed, playVideo, pauseVideo, restartVideo },
+    devTools: true,
   })
   const { duration, elapsed } = current.context
 

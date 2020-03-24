@@ -9,7 +9,6 @@ import Layout from '../components/Layout'
 
 const toggleMachine = new Machine({
   id: 'toggleMachine',
-  devTools: true,
   initial: 'inactive',
   states: {
     inactive: {
