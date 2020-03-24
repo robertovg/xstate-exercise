@@ -7,6 +7,10 @@ const routesDefinition = {
     path: `/toggle`,
     linkName: 'Toggle',
   },
+  dataLoader: {
+    path: `/dataLoader`,
+    linkName: 'Data Loader',
+  },
 }
 
 export default routesDefinition

@@ -6,7 +6,7 @@ import routesDefinition from '../util/routesDefinition'
 const routes = Object.values(routesDefinition)
 
 const Wrapper = styled.div`
-  ul {
+  nav ul {
     list-style: none;
     width: 100%;
     display: grid;
@@ -21,7 +21,7 @@ const Wrapper = styled.div`
     background-color: #282c34;
     min-height: 100vh;
     display: grid;
-    grid-auto-flow: column;
+    grid-auto-flow: row;
     align-items: center;
     justify-content: center;
   }

@@ -2,9 +2,14 @@ import React from 'react'
 import { useMachine } from '@xstate/react'
 import { Machine } from 'xstate'
 import Layout from '../components/Layout'
+/**
+ * Example following -
+ * [XState - An introduction - Finite State Machines in React - Toggle](https://www.youtube.com/watch?v=iDZxjJYMOUQ)
+ */
 
 const toggleMachine = new Machine({
   id: 'toggleMachine',
+  devTools: true,
   initial: 'inactive',
   states: {
     inactive: {
@@ -20,7 +25,7 @@ const toggleMachine = new Machine({
   },
 })
 
-function Toggle() {
+const Toggle = () => {
   const [current, send] = useMachine(toggleMachine, { devTools: true })
 
   return (

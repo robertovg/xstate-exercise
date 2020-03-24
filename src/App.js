@@ -4,6 +4,7 @@ import OriginalApp from './pages/OriginalApp'
 import routesDefinition from './util/routesDefinition'
 import Toggle from './pages/Toggle'
 import Layout from './components/Layout'
+import DataLoader from './pages/DataLoader'
 
 const NotFoundPage = () => {
   return (
@@ -15,6 +16,7 @@ const NotFoundPage = () => {
 const routes = {
   [routesDefinition.home.path]: () => <OriginalApp />,
   [routesDefinition.toggle.path]: () => <Toggle />,
+  [routesDefinition.dataLoader.path]: () => <DataLoader />,
 }
 
 const App = () => {
