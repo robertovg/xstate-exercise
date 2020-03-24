@@ -41,6 +41,7 @@ module.exports = {
     'react/prop-types': ['warn', { ignore: ['children'] }],
     'eslint(one-var)': 'off',
     'react/jsx-props-no-spreadin': 'off',
+    'no-param-reassign': 'off',
   },
   settings: {
     react: {

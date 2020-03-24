@@ -5,6 +5,7 @@ import routesDefinition from './util/routesDefinition'
 import Toggle from './pages/Toggle'
 import Layout from './components/Layout'
 import DataLoader from './pages/DataLoader'
+import VideoController from './pages/VideoController'
 
 const NotFoundPage = () => {
   return (
@@ -17,6 +18,7 @@ const routes = {
   [routesDefinition.home.path]: () => <OriginalApp />,
   [routesDefinition.toggle.path]: () => <Toggle />,
   [routesDefinition.dataLoader.path]: () => <DataLoader />,
+  [routesDefinition.videoController.path]: () => <VideoController />,
 }
 
 const App = () => {
